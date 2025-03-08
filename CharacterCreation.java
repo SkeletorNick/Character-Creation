@@ -1,7 +1,5 @@
-
 import java.util.Random;
 import java.util.Scanner;
-
 public class CharacterCreation {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -13,7 +11,7 @@ public class CharacterCreation {
                 level = s.nextInt();
             }
             Random r = new Random();
-            String[] classes = {"Artificer","Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rouge","Sorcerer","Warlock","Wizard"};
+            String[] classes = {"Artificer","Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorcerer","Warlock","Wizard"};
             int number = Math.abs(r.nextInt()%13);
             String power = classes[number];
             System.out.println("Class: "+power);
@@ -60,7 +58,6 @@ public class CharacterCreation {
             level = s.nextInt();
         }
     }
-
     public static void makeCharacter(String power, int[] stats, int level, Random r){
         if(power == "Artificer"){
             artificer(stats, level, r);
@@ -80,8 +77,8 @@ public class CharacterCreation {
             paladin(stats, level ,r);
         }else if(power == "Ranger"){
             ranger(stats, level ,r);
-        }else if(power == "Rouge"){
-            rouge(stats, level ,r);
+        }else if(power == "Rogue"){
+            rogue(stats, level ,r);
         }else if(power == "Sorcerer"){
             sorcerer(stats, level ,r);
         }else if(power == "Warlock"){
@@ -224,6 +221,7 @@ public class CharacterCreation {
         System.out.println("Cha: "+ stats[1]);
     }
     private static void paladin(int[] stats, int level, Random r) {
+        System.out.print("Choose between Dex(0) and Str(1) build:");
         int conMod = (stats[3]-10)/2;
         int hp = 10+conMod;
         for(int i = 0; i< level-1;i++){
@@ -234,60 +232,118 @@ public class CharacterCreation {
                 hp += health;
             }
         }
-        System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[1]+" or "+stats[5]+"choose if you want ethier dex or str build");
-        System.out.println("Dex: "+ stats[1]+" or "+stats[5]+"choose if you want ethier dex or str build");
-        System.out.println("Con: "+ stats[3]);
-        System.out.println("Int: "+ stats[0]);
-        System.out.println("Wis: "+ stats[2]);
-        System.out.println("Cha: "+ stats[4]);
+        Scanner s = new Scanner(System.in);
+        String input = s.next();
+        if (input.equals("0") || input.equals("Dex")) {
+            System.out.println("Health: "+ hp);
+            System.out.println("Str: "+ stats[1]);
+            System.out.println("Dex: "+ stats[5]);
+            System.out.println("Con: "+ stats[3]);
+            System.out.println("Int: "+ stats[0]);
+            System.out.println("Wis: "+ stats[2]);
+            System.out.println("Cha: "+ stats[4]);
+        }else{
+            System.out.println("Health: "+ hp);
+            System.out.println("Str: "+ stats[5]);
+            System.out.println("Dex: "+ stats[1]);
+            System.out.println("Con: "+ stats[3]);
+            System.out.println("Int: "+ stats[0]);
+            System.out.println("Wis: "+ stats[2]);
+            System.out.println("Cha: "+ stats[4]);
+        }
     }
     private static void ranger(int[] stats, int level, Random r) {
-        int conMod = (stats[3]-10)/2;
-        int hp = 10+conMod;
-        for(int i = 0; i< level-1;i++){
-            int health = conMod+Math.abs(r.nextInt()%10)+1;
-            if(health <= 0){
-                hp += 1;
+        System.out.print("Choose between Dex(0) Str(1) and Wis(2) build:");
+        Scanner s = new Scanner(System.in);
+        String input = s.next();
+        if (input.equals("0") || input.equals("Dex")) {
+            int conMod = (stats[3]-10)/2;
+            int hp = 10+conMod;
+            for(int i = 0; i< level-1;i++){
+                int health = conMod+Math.abs(r.nextInt()%10)+1;
+                if(health <= 0){
+                    hp += 1;
+                }else{
+                    hp += health;
+                }
+            }
+            System.out.println("Health: "+ hp);
+            System.out.println("Str: "+ stats[1]);
+            System.out.println("Dex: "+ stats[5]);
+            System.out.println("Con: "+ stats[4]);
+            System.out.println("Int: "+ stats[2]);
+            System.out.println("Wis: "+ stats[3]);
+            System.out.println("Cha: "+ stats[0]);
+        }else{
+            int conMod = (stats[3]-10)/2;
+            int hp = 10+conMod;
+            for(int i = 0; i< level-1;i++){
+                int health = conMod+Math.abs(r.nextInt()%10)+1;
+                if(health <= 0){
+                    hp += 1;
+                }else{
+                    hp += health;
+                }
+            }
+            if((input.equals("1") || input.equals("Str"))){
+                System.out.println("Health: "+ hp);
+                System.out.println("Str: "+ stats[5]);
+                System.out.println("Dex: "+ stats[4]);
+                System.out.println("Con: "+ stats[3]);
+                System.out.println("Int: "+ stats[1]);
+                System.out.println("Wis: "+ stats[2]);
+                System.out.println("Cha: "+ stats[0]);
             }else{
-                hp += health;
+                System.out.println("Str: "+ stats[0]);
+                System.out.println("Dex: "+ stats[4]);
+                System.out.println("Con: "+ stats[3]);
+                System.out.println("Int: "+ stats[1]);
+                System.out.println("Wis: "+ stats[5]);
+                System.out.println("Cha: "+ stats[2]);
             }
         }
-        System.out.println("Health: "+ hp);
-        System.out.println("Str based:");
-        System.out.println("Str: "+ stats[5]);
-        System.out.println("Dex: "+ stats[4]);
-        System.out.println("Con: "+ stats[3]);
-        System.out.println("Int: "+ stats[1]);
-        System.out.println("Wis: "+ stats[2]);
-        System.out.println("Cha: "+ stats[0]);
-        System.out.println("Wis based:");
-        System.out.println("Str: "+ stats[0]);
-        System.out.println("Dex: "+ stats[4]);
-        System.out.println("Con: "+ stats[3]);
-        System.out.println("Int: "+ stats[1]);
-        System.out.println("Wis: "+ stats[5]);
-        System.out.println("Cha: "+ stats[2]);
     }
-    private static void rouge(int[] stats, int level, Random r) {
-        int conMod = (stats[4]-10)/2;
-        int hp = 8+conMod;
-        for(int i = 0; i< level-1;i++){
-            int health = conMod+Math.abs(r.nextInt()%8)+1;
-            if(health <= 0){
-                hp += 1;
-            }else{
-                hp += health;
+    private static void rogue(int[] stats, int level, Random r) {
+        System.out.print("Is this an Aracne Trickster y/n:");
+        Scanner s = new Scanner(System.in);
+        String input = s.next();
+        if(input.equals("y")){
+            int conMod = (stats[3]-10)/2;
+            int hp = 8+conMod;
+            for(int i = 0; i< level-1;i++){
+                int health = conMod+Math.abs(r.nextInt()%8)+1;
+                if(health <= 0){
+                    hp += 1;
+                }else{
+                    hp += health;
+                }
             }
+            System.out.println("Health: "+ hp);
+            System.out.println("Str: "+ stats[0]);
+            System.out.println("Dex: "+ stats[5]);
+            System.out.println("Con: "+ stats[3]);
+            System.out.println("Int: "+ stats[4]);
+            System.out.println("Wis: "+ stats[2]);
+            System.out.println("Cha: "+ stats[1]);
+        }else{
+            int conMod = (stats[4]-10)/2;
+            int hp = 8+conMod;
+            for(int i = 0; i< level-1;i++){
+                int health = conMod+Math.abs(r.nextInt()%8)+1;
+                if(health <= 0){
+                    hp += 1;
+                }else{
+                    hp += health;
+                }
+            }
+            System.out.println("Health: "+ hp);
+            System.out.println("Str: "+ stats[0]);
+            System.out.println("Dex: "+ stats[5]);
+            System.out.println("Con: "+ stats[4]);
+            System.out.println("Int: "+ stats[1]);
+            System.out.println("Wis: "+ stats[3]);
+            System.out.println("Cha: "+ stats[2]);
         }
-        System.out.println("Health: "+ hp);
-        System.out.println("This will not work for an Arcane trickster");
-        System.out.println("Str: "+ stats[0]);
-        System.out.println("Dex: "+ stats[5]);
-        System.out.println("Con: "+ stats[4]);
-        System.out.println("Int: "+ stats[1]);
-        System.out.println("Wis: "+ stats[3]);
-        System.out.println("Cha: "+ stats[2]);
     }
     private static void sorcerer(int[] stats, int level, Random r) {
         int conMod = (stats[4]-10)/2;
@@ -301,7 +357,6 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-
         System.out.println("Str: "+ stats[0]);
         System.out.println("Dex: "+ stats[3]);
         System.out.println("Con: "+ stats[4]);
@@ -347,13 +402,4 @@ public class CharacterCreation {
         System.out.println("Wis: "+ stats[2]);
         System.out.println("Cha: "+ stats[1]);
     }
-
-
-
-
-
-
-
-
-
 }
