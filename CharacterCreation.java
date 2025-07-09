@@ -1,3 +1,10 @@
+/*
+ * Title: CharacterCreation.java
+ * Abstract: Makes a legal DnD chacracter guven a level and gives the optimized stat sheet given a 4d6 drop the lowest stat spread
+ * Author: Nicholas Dimitriou
+ * Email: 
+ * Date: 3/8/2025
+ */
 import java.util.Random;
 import java.util.Scanner;
 public class CharacterCreation {
@@ -54,13 +61,15 @@ public class CharacterCreation {
                 stats[j+1]=key;
             }
             System.out.println();
-            makeCharacter(power, stats, level, r);
+            makeCharacter(power, stats, level, r, s);
             System.out.print(levelDefiner);
             level = s.nextInt();
         }
     }
-    public static void makeCharacter(String power, int[] stats, int level, Random r){
+    public static void makeCharacter(String power, int number, int[] stats, int level, Random r, Scanner s){
+        
         if(power == "Artificer"){
+            
             artificer(stats, level, r);
         }else if(power == "Barbarian"){
             barbarian(stats, level ,r);
