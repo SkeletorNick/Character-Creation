@@ -2,7 +2,7 @@
  * Title: CharacterCreation.java
  * Abstract: Makes a legal DnD chacracter guven a level and gives the optimized stat sheet given a 4d6 drop the lowest stat spread
  * Author: Nicholas Dimitriou
- * Email: 
+ * Email:
  * Date: 3/8/2025
  */
 import java.util.Random;
@@ -107,12 +107,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Dex: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Int: "+ stats[5]+" "+getModifer(stats[5]));
-        System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Cha: "+ stats[1]+" "+getModifer(stats[1]));
+        System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Dex: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Int: "+ stats[5]+" ("+getModifer(stats[5])+")");
+        System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Cha: "+ stats[1]+" ("+getModifer(stats[1])+")");
     }
     private static void barbarian(int[] stats, int level, Random r) {
         int conMod = getModifer(stats[4]);
@@ -126,12 +126,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[5]+" "+getModifer(stats[5]));
-        System.out.println("Dex: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Int: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Cha: "+ stats[1]+" "+getModifer(stats[1]));
+        System.out.println("Str: "+ stats[5]+" ("+getModifer(stats[5])+")");
+        System.out.println("Dex: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Int: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Cha: "+ stats[1]+" ("+getModifer(stats[1])+")");
     }
     private static void bard(int[] stats, int level, Random r){
         int conMod = getModifer(stats[3]);
@@ -145,12 +145,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Dex: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Int: "+ stats[1]+" "+getModifer(stats[1]));
-        System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Cha: "+ stats[5]+" "+getModifer(stats[5]));
+        System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Dex: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Int: "+ stats[1]+" ("+getModifer(stats[1])+")");
+        System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Cha: "+ stats[5]+" ("+getModifer(stats[5])+")");
     }
     private static void cleric(int[] stats, int level, Random r) {
         int conMod = getModifer(stats[3]);
@@ -164,12 +164,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Dex: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Int: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Wis: "+ stats[5]+" "+getModifer(stats[5]));
-        System.out.println("Cha: "+ stats[1]+" "+getModifer(stats[1]));
+        System.out.println("Str: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Dex: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Int: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Wis: "+ stats[5]+" ("+getModifer(stats[5])+")");
+        System.out.println("Cha: "+ stats[1]+" ("+getModifer(stats[1])+")");
     }
     private static void druid(int[] stats, int level, Random r) {
         int conMod = getModifer(stats[4]);
@@ -183,12 +183,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Dex: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Int: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Wis: "+ stats[5]+" "+getModifer(stats[5]));
-        System.out.println("Cha: "+ stats[1]+" "+getModifer(stats[1]));
+        System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Dex: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Int: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Wis: "+ stats[5]+" ("+getModifer(stats[5])+")");
+        System.out.println("Cha: "+ stats[1]+" ("+getModifer(stats[1])+")");
     }
     private static void fighter(int[] stats, int level, Random r) {
         int conMod = getModifer(stats[4]);
@@ -202,12 +202,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[5]+" "+getModifer(stats[5]));
-        System.out.println("Dex: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Int: "+ stats[1]+" "+getModifer(stats[1]));
-        System.out.println("Wis: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Cha: "+ stats[0]+" "+getModifer(stats[0]));
+        System.out.println("Str: "+ stats[5]+" ("+getModifer(stats[5])+")");
+        System.out.println("Dex: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Int: "+ stats[1]+" ("+getModifer(stats[1])+")");
+        System.out.println("Wis: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Cha: "+ stats[0]+" ("+getModifer(stats[0])+")");
     }
     private static void monk(int[] stats, int level, Random r) {
         int conMod = getModifer(stats[3]);
@@ -221,12 +221,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Dex: "+ stats[5]+" "+getModifer(stats[5]));
-        System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Int: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Wis: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Cha: "+ stats[1]+" "+getModifer(stats[1]));
+        System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Dex: "+ stats[5]+" ("+getModifer(stats[5])+")");
+        System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Int: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Wis: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Cha: "+ stats[1]+" ("+getModifer(stats[1])+")");
     }
     private static void paladin(int[] stats, int level, Random r) {
         System.out.print("Choose between Dex(0) and Str(1) build:");
@@ -244,20 +244,20 @@ public class CharacterCreation {
         String input = s.next();
         if (input.equals("0") || input.equals("Dex")) {
             System.out.println("Health: "+ hp);
-            System.out.println("Str: "+ stats[1]+" "+getModifer(stats[1]));
-            System.out.println("Dex: "+ stats[5]+" "+getModifer(stats[5]));
-            System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-            System.out.println("Int: "+ stats[0]+" "+getModifer(stats[0]));
-            System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-            System.out.println("Cha: "+ stats[4]+" "+getModifer(stats[4]));
+            System.out.println("Str: "+ stats[1]+" ("+getModifer(stats[1])+")");
+            System.out.println("Dex: "+ stats[5]+" ("+getModifer(stats[5])+")");
+            System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+            System.out.println("Int: "+ stats[0]+" ("+getModifer(stats[0])+")");
+            System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+            System.out.println("Cha: "+ stats[4]+" ("+getModifer(stats[4])+")");
         }else{
             System.out.println("Health: "+ hp);
-            System.out.println("Str: "+ stats[5]+" "+getModifer(stats[5]));
-            System.out.println("Dex: "+ stats[1]+" "+getModifer(stats[1]));
-            System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-            System.out.println("Int: "+ stats[0]+" "+getModifer(stats[0]));
-            System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-            System.out.println("Cha: "+ stats[4]+" "+getModifer(stats[4]));
+            System.out.println("Str: "+ stats[5]+" ("+getModifer(stats[5])+")");
+            System.out.println("Dex: "+ stats[1]+" ("+getModifer(stats[1])+")");
+            System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+            System.out.println("Int: "+ stats[0]+" ("+getModifer(stats[0])+")");
+            System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+            System.out.println("Cha: "+ stats[4]+" ("+getModifer(stats[4])+")");
         }
     }
     private static void ranger(int[] stats, int level, Random r) {
@@ -277,28 +277,28 @@ public class CharacterCreation {
         if (input.equals("0") || input.equals("Dex")) {
 
             System.out.println("Health: "+ hp);
-            System.out.println("Str: "+ stats[1]+" "+getModifer(stats[1]));
-            System.out.println("Dex: "+ stats[5]+" "+getModifer(stats[5]));
-            System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-            System.out.println("Int: "+ stats[2]+" "+getModifer(stats[2]));
-            System.out.println("Wis: "+ stats[3]+" "+getModifer(stats[3]));
-            System.out.println("Cha: "+ stats[0]+" "+getModifer(stats[0]));
+            System.out.println("Str: "+ stats[1]+" ("+getModifer(stats[1])+")");
+            System.out.println("Dex: "+ stats[5]+" ("+getModifer(stats[5])+")");
+            System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+            System.out.println("Int: "+ stats[2]+" ("+getModifer(stats[2])+")");
+            System.out.println("Wis: "+ stats[3]+" ("+getModifer(stats[3])+")");
+            System.out.println("Cha: "+ stats[0]+" ("+getModifer(stats[0])+")");
         }else{
             if((input.equals("1") || input.equals("Str"))){
                 System.out.println("Health: "+ hp);
-                System.out.println("Str: "+ stats[5]+" "+getModifer(stats[5]));
-                System.out.println("Dex: "+ stats[4]+" "+getModifer(stats[4]));
-                System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-                System.out.println("Int: "+ stats[1]+" "+getModifer(stats[1]));
-                System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-                System.out.println("Cha: "+ stats[0]+" "+getModifer(stats[0]));
+                System.out.println("Str: "+ stats[5]+" ("+getModifer(stats[5])+")");
+                System.out.println("Dex: "+ stats[4]+" ("+getModifer(stats[4])+")");
+                System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+                System.out.println("Int: "+ stats[1]+" ("+getModifer(stats[1])+")");
+                System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+                System.out.println("Cha: "+ stats[0]+" ("+getModifer(stats[0])+")");
             }else{
-                System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-                System.out.println("Dex: "+ stats[4]+" "+getModifer(stats[4]));
-                System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-                System.out.println("Int: "+ stats[1]+" "+getModifer(stats[1]));
-                System.out.println("Wis: "+ stats[5]+" "+getModifer(stats[5]));
-                System.out.println("Cha: "+ stats[2]+" "+getModifer(stats[2]));
+                System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+                System.out.println("Dex: "+ stats[4]+" ("+getModifer(stats[4])+")");
+                System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+                System.out.println("Int: "+ stats[1]+" ("+getModifer(stats[1])+")");
+                System.out.println("Wis: "+ stats[5]+" ("+getModifer(stats[5])+")");
+                System.out.println("Cha: "+ stats[2]+" ("+getModifer(stats[2])+")");
             }
         }
     }
@@ -318,12 +318,12 @@ public class CharacterCreation {
                 }
             }
             System.out.println("Health: "+ hp);
-            System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-            System.out.println("Dex: "+ stats[5]+" "+getModifer(stats[5]));
-            System.out.println("Con: "+ stats[3]+" "+getModifer(stats[3]));
-            System.out.println("Int: "+ stats[4]+" "+getModifer(stats[4]));
-            System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-            System.out.println("Cha: "+ stats[1]+" "+getModifer(stats[1]));
+            System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+            System.out.println("Dex: "+ stats[5]+" ("+getModifer(stats[5])+")");
+            System.out.println("Con: "+ stats[3]+" ("+getModifer(stats[3])+")");
+            System.out.println("Int: "+ stats[4]+" ("+getModifer(stats[4])+")");
+            System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+            System.out.println("Cha: "+ stats[1]+" ("+getModifer(stats[1])+")");
         }else{
             int conMod = getModifer(stats[4]);
             int hp = 8+conMod;
@@ -336,12 +336,12 @@ public class CharacterCreation {
                 }
             }
             System.out.println("Health: "+ hp);
-            System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-            System.out.println("Dex: "+ stats[5]+" "+getModifer(stats[5]));
-            System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-            System.out.println("Int: "+ stats[1]+" "+getModifer(stats[1]));
-            System.out.println("Wis: "+ stats[3]+" "+getModifer(stats[3]));
-            System.out.println("Cha: "+ stats[2]+" "+getModifer(stats[2]));
+            System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+            System.out.println("Dex: "+ stats[5]+" ("+getModifer(stats[5])+")");
+            System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+            System.out.println("Int: "+ stats[1]+" ("+getModifer(stats[1])+")");
+            System.out.println("Wis: "+ stats[3]+" ("+getModifer(stats[3])+")");
+            System.out.println("Cha: "+ stats[2]+" ("+getModifer(stats[2])+")");
         }
     }
     private static void sorcerer(int[] stats, int level, Random r) {
@@ -356,12 +356,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Dex: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Int: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Wis: "+ stats[1]+" "+getModifer(stats[1]));
-        System.out.println("Cha: "+ stats[5]+" "+getModifer(stats[5]));
+        System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Dex: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Int: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Wis: "+ stats[1]+" ("+getModifer(stats[1])+")");
+        System.out.println("Cha: "+ stats[5]+" ("+getModifer(stats[5])+")");
     }
     private static void warlock(int[] stats, int level, Random r) {
         int conMod = getModifer(stats[4]);
@@ -375,12 +375,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Dex: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Int: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Wis: "+ stats[1]+" "+getModifer(stats[1]));
-        System.out.println("Cha: "+ stats[5]+" "+getModifer(stats[5]));
+        System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Dex: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Int: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Wis: "+ stats[1]+" ("+getModifer(stats[1])+")");
+        System.out.println("Cha: "+ stats[5]+" ("+getModifer(stats[5])+")");
     }
     private static void wizard(int[] stats, int level, Random r) {
         int conMod = getModifer(stats[4]);
@@ -394,12 +394,12 @@ public class CharacterCreation {
             }
         }
         System.out.println("Health: "+ hp);
-        System.out.println("Str: "+ stats[0]+" "+getModifer(stats[0]));
-        System.out.println("Dex: "+ stats[3]+" "+getModifer(stats[3]));
-        System.out.println("Con: "+ stats[4]+" "+getModifer(stats[4]));
-        System.out.println("Int: "+ stats[5]+" "+getModifer(stats[5]));
-        System.out.println("Wis: "+ stats[2]+" "+getModifer(stats[2]));
-        System.out.println("Cha: "+ stats[1]+" "+getModifer(stats[1]));
+        System.out.println("Str: "+ stats[0]+" ("+getModifer(stats[0])+")");
+        System.out.println("Dex: "+ stats[3]+" ("+getModifer(stats[3])+")");
+        System.out.println("Con: "+ stats[4]+" ("+getModifer(stats[4])+")");
+        System.out.println("Int: "+ stats[5]+" ("+getModifer(stats[5])+")");
+        System.out.println("Wis: "+ stats[2]+" ("+getModifer(stats[2])+")");
+        System.out.println("Cha: "+ stats[1]+" ("+getModifer(stats[1])+")");
     }
     public static int getModifer(int baseValue){
         int modifier =(baseValue-10)/2;
