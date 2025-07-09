@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CharacterCreation {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.print("Enter in desired legal level type 0 to end: ");
+        System.out.print("Enter in desired legal level(1-20) type 0 to end: ");
         int level = s.nextInt();
         while(level != 0){
             while(level > 20){
